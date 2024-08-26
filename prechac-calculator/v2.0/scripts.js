@@ -39,7 +39,7 @@ function calculatePatterns() {
     let magicNumber = period / people;
 
     let output = `Tu número mágico es el '${formatMagicNumber(magicNumber)}'\n`;
-    output += `Aquí tienes todos los posibles patrones de Prechac para el siteswap '${pattern}' entre ${people} personas:\n`;
+    output += `Aquí tienes posibles patrones de Prechac para el siteswap '${pattern}' entre ${people} personas:\n`;
 
     for (let numElements = 1; numElements <= pattern.length; numElements++) {
         let positions = getCombinations([...Array(pattern.length).keys()], numElements);
