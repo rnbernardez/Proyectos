@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Prechac</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Prechac</h1>
+        <div class="input-group">
+            <label for="patternInput">Introduce un siteswap:</label>
+            <input type="text" id="patternInput" placeholder="Ej: 423">
+        </div>
+        <div class="input-group">
+            <label for="peopleInput">¿Cuántas personas?</label>
+            <input type="number" id="peopleInput" min="1" placeholder="Ej: 2">
+        </div>
+        <button onclick="calculatePatterns()">Calcular Patrones</button>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Calculadora de Prechac. Diseñado para malabaristas por malabaristas.</p>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
