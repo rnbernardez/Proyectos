@@ -32,7 +32,7 @@ function calculatePatterns() {
     let period = pattern.length;
 
     if (sumatory % period !== 0) {
-        resultsDiv.innerText = 'El siteswap no es válido. Recuerda que la suma total de los números del siteswap al dividirse por la cantidad de los mismos, debe dar un número entero.';
+        alert('El siteswap no es válido. Recuerda que la suma total de los números del siteswap al dividirse por la cantidad de los mismos, debe dar un número entero.');
         return;
     }
 
