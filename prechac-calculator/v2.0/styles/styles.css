@@ -104,7 +104,7 @@ body {
 }
 
 .footer p {
-    margin: 0;
+    margin: 5px 0; /* Añade un poco de espacio entre los párrafos */
 }
 
 /* Estilos de entrada y botones */
