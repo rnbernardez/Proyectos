@@ -8,23 +8,38 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Calculadora de Prechac</h1>
-        <div class="input-group">
-            <label for="patternInput">Introduce un siteswap:</label>
-            <input type="text" id="patternInput" placeholder="Ej: 423">
+    <div class="main-container">
+        <div class="info-section">
+            <h2>¿Qué es el Prechac?</h2>
+            <p>
+                El Prechac es un estilo de malabarismo que utiliza patrones de siteswap modificados para crear secuencias visualmente interesantes entre varios malabaristas. Un siteswap de malabares es válido si la suma de los números en el patrón es divisible por la longitud del mismo, asegurando así el balanceo adecuado de los objetos y garantizando que el patrón pueda ser repetido cíclicamente sin alterar el número de objetos en el aire.
+            </p>
+            <h3>Más Información</h3>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1ODKQbvrwjMVju-0amzKXN1KOIDGtE5_S/view?usp=drive_link" target="_blank">Tere Dávila - Prechac</a></li>
+                <li><a href="https://drive.google.com/file/d/1JxCOqsQ6I3UZ_cbgq1OkM_kA2oTzW4B5/view?usp=drive_link" target="_blank">Sean Gandini - Staggered Symmetric Passing</a></li>
+            </ul>
         </div>
-        <div class="input-group">
-            <label for="peopleInput">¿Cuántas personas?</label>
-            <input type="number" id="peopleInput" min="1" placeholder="Ej: 2">
-        </div>
-        <button onclick="calculatePatterns()">Calcular Patrones</button>
 
-        <div id="results" class="results"></div>
+        <div class="calculator-section">
+            <div class="container">
+                <h1>Calculadora de Prechac</h1>
+                <div class="input-group">
+                    <label for="patternInput">Introduce un siteswap:</label>
+                    <input type="text" id="patternInput" placeholder="Ej: 423">
+                </div>
+                <div class="input-group">
+                    <label for="peopleInput">¿Cuántas personas?</label>
+                    <input type="number" id="peopleInput" min="1" placeholder="Ej: 2">
+                </div>
+                <button onclick="calculatePatterns()">Calcular Patrones</button>
+                <div id="results" class="results"></div> <!-- Resultados dentro de la misma caja -->
+            </div>
+        </div>
     </div>
 
     <div class="footer">
-        <p>© 2024 Calculadora de Prechac. Diseñado para malabaristas por malabaristas.
+        <p>© 2024 Calculadora de Prechac. Diseñado para malabaristas por @ilbernando.
             Gracias Tere Dávila y Sean Gandini por la información e inspiración.
             Industria Argentina.
         </p>

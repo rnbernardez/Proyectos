@@ -3,8 +3,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-    color: #333;
+    background: #181818;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,49 +12,135 @@ body {
     min-height: 100vh;
 }
 
-.container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    text-align: center;
+/* Envoltura del contenido */
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* Espacio entre las dos columnas */
+    gap: 40px; /* Espacio entre columnas */
+    max-width: 1000px;
+    padding: 20px;
+    width: 100%; /* Asegura que el contenido se adapte al tamaño de la ventana */
+}
+
+/* Sección de información */
+.info-section {
+    flex: 1; /* Permite que esta sección ocupe el espacio disponible */
+    max-width: 400px; /* Limita el ancho máximo para que no se expanda demasiado */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #dddddd;
     animation: fadeIn 1s ease-in-out;
 }
 
-h1 {
-    color: #007BFF;
-    margin-bottom: 20px;
+.info-section h2 {
+    color: #00d8ff; /* Celeste que usa el botón */
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
+.info-section p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.info-section h3 {
+    color: #00d8ff; /* Celeste que usa el botón */
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+}
+
+.info-section a {
+    color: #00d8ff; /* Celeste que usa el botón */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la calculadora */
+.calculator-section {
+    flex: 1; /* Permite que esta sección ocupe el espacio disponible */
+}
+
+/* Ajuste para la calculadora */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos del pie de página */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Estilos de entrada y botones */
 .input-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #aaaaaa;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
+    padding: 12px;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .input-group input:focus {
-    border-color: #007BFF;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px #00d8ff;
     outline: none;
 }
 
 button {
     padding: 12px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #00d8ff;
+    color: #181818;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,8 +149,8 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background-color: #00a3cc;
+    transform: translateY(-2px);
 }
 
 .results {
@@ -72,15 +158,16 @@ button:hover {
     text-align: left;
     white-space: pre-wrap;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     max-height: 300px;
     overflow-y: auto;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-in-out forwards;
+    color: #ffffff;
 }
 
 /* Animaciones */
@@ -104,16 +191,4 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Estilos del pie de página */
-.footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-}
-
-.footer p {
-    margin: 0;
 }
