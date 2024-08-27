@@ -12,6 +12,10 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    color:#00d8ff
+}
+
 /* Envoltura del contenido */
 .main-container {
     display: flex;
