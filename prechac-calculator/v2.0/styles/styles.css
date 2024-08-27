@@ -192,3 +192,26 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+/* Cambios para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .calculator-section {
+        order: 1; /* Asegura que la calculadora esté arriba */
+    }
+
+    .info-section {
+        order: 2; /* Asegura que la info esté abajo */
+    }
+
+    /* Ajuste para mejorar la legibilidad */
+    .info-section, .calculator-section {
+        width: 100%;
+        max-width: none;
+    }
+}
